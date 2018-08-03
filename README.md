@@ -14,4 +14,4 @@ python test_model.py
 ```
 ## The Result
 ![Result](https://github.com/HytonightYX/HZNU_Captcha_CNN/blob/master/Tensorboard_res.png)
-It's really a good result!
+＜/br＞It's really a good result!
