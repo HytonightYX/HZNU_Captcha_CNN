@@ -8,14 +8,14 @@ HZNU的教务处系统验证码识别，理论上可以识别所有方正教务�
 python tensorflow_cnn_train.py
 ```
 #### 3.Wait
-I used `i5-7200U``8GB DDR4``MX-150,2GB`, and train this model for 20min.
+I used `i5-7200U 8GB DDR4 MX-150`, and trained this model for anout 20min.
 #### 4.Test:   
 ```
 python test_model.py
 ```
 ## The Train Result
 ![Result](https://github.com/HytonightYX/HZNU_Captcha_CNN/blob/master/Tensorboard_res.png)    
- So we got nearly 100% accuracy. It's really a good result!
+ So we got nearly 100% accuracy.
 ## The Test Result(A small part of console)
 ```
 ···
