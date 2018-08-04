@@ -116,7 +116,7 @@ def crack_captcha_cnn(w_alpha=0.01, b_alpha=0.1):
     x = tf.reshape(X, shape=[-1, IMAGE_HEIGHT, IMAGE_WIDTH, 1])  # [占位, H, W, 灰度为1]
 
     # 3 conv layer
-    w_c1 = tf.Variable(w_alpha * tf.random_normal([3, 3, 1, 32]))  # 从正太分布输出随机值      卷积窗口3*3
+    w_c1 = tf.Variable(w_alpha * tf.random_normal([3, 3, 1, 32]))  # 卷积核3*3
     b_c1 = tf.Variable(b_alpha * tf.random_normal([32]))
     conv1 = tf.nn.relu(tf.nn.bias_add(tf.nn.conv2d(x, w_c1, strides=[1, 1, 1, 1], padding='SAME'), b_c1))  # 卷积过程   H, W上滑动的步长  让卷积的输入和输入保持同样的尺寸
     conv1 = tf.nn.max_pool(conv1, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')  # 因为希望整体上缩小图片尺寸，因此池化层的strides也设为横竖两个方向上以2为步长。
@@ -172,13 +172,13 @@ def train_crack_captcha_cnn():
             batch_x, batch_y = get_next_batch(64, 'train')
             _, loss_, summery = sess.run( [optimizer, loss, merged], feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.75})
             writer.add_summary(summery, step)
-            print(step, loss_)
+            print("step= {}  loss= {}".format(step, loss_))
 
             # 每100 step计算一次准确率
             if step % 100 == 0:
                 batch_x_test, batch_y_test = get_next_batch(100, 'test')
                 acc = sess.run(accuracy, feed_dict={X: batch_x_test, Y: batch_y_test, keep_prob: 1.})
-                print(step, acc)
+                print("-----Accuracy: " + step, acc + " -----")
                 if acc > 0.98:
                     saver.save(sess, "./model/crack_capcha.model", global_step=step)
                     break
