@@ -15,7 +15,7 @@ python test_model.py
 ```
 ## The Train Result
 ![ So we got nearly 100% accuracy](https://github.com/HytonightYX/HZNU_Captcha_CNN/blob/master/Tensorboard_res.png)    
-*Our model is saved in * `model.zip` *you can also train it again.*
+**Our model is saved in ** `model.zip` **you can also train it again.**
 ## The Test Result(A small part of console)
 ```
 ···
