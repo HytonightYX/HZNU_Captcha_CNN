@@ -14,8 +14,8 @@ I used `i5-7200U 8GB DDR4 MX-150`, and trained this model for anout 20min.
 python test_model.py
 ```
 ## The Train Result
-![Result](https://github.com/HytonightYX/HZNU_Captcha_CNN/blob/master/Tensorboard_res.png)    
- So we got nearly 100% accuracy.
+![ So we got nearly 100% accuracy](https://github.com/HytonightYX/HZNU_Captcha_CNN/blob/master/Tensorboard_res.png)    
+*Our model is saved in * `model.zip` *you can also train it again.*
 ## The Test Result(A small part of console)
 ```
 ···
