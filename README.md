@@ -1,6 +1,5 @@
 # HZNU_Captcha_CNN
-HZNU的教务处系统验证码识别，理论上可以识别所有方正教务系统的验证码
-
+NULL
 ## How to use
 #### 1.Unzip `HZNU_Captcha_Images.zip`, it contain 2370 train images and 624 images for test.   
 #### 2.Bash:   
